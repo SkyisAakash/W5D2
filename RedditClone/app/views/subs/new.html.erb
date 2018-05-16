@@ -1,10 +1,9 @@
-<div class="block1">
-<h1>Edit your sub</h1>
+<!-- <div class="block1"> -->
+<h1>Create a new sub!</h1>
 <br>
 
-<form action="<%=sub_url%>" method="post">
+<form action="<%=subs_url%>" method="post">
   <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
-  <input type="hidden" name="_method" value="patch">
 
   <label>
     Title
@@ -12,10 +11,11 @@
   </label>
 
   <br>
+  <br>
 
   <label>
     Description
-    <textarea name="sub[description]" rows="8" cols="80"></textarea>
+    <textarea name="sub[description]" rows="2" cols="30"></textarea>
   </label>
 
   <br>
@@ -23,4 +23,4 @@
   <input type="submit" name="" value="Submit!">
 
 </form>
-</div>
+<!-- </div> -->

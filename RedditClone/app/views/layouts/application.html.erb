@@ -9,7 +9,18 @@
   </head>
 
   <body>
+
+    <% if flash[:errors] %>
+    <ul>
+      <% flash[:errors].each do |error| %>
+      <li> <%= error %> </li>
+      <% end %>
+    </ul>
+    <% end %>
+
+
     <% if logged_in? %>
+      <div class="header_block">
       <ul>
         <li><%= current_user.username %></li>
         <li><a href="<%=new_sub_url%>">Create a sub!</a></li>
@@ -20,9 +31,14 @@
           <li><input type="submit" name="" value="Logout"></li>
         </form>
       </ul>
+    </div>
     <% else %>
       <a href="<%=new_session_url%>">Sign In</a>
     <% end %>
+    <div><br></div>
+    <div class="block1">
     <%= yield %>
+    </div>
+
   </body>
 </html>

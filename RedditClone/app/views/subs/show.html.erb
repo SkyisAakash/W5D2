@@ -1,4 +1,4 @@
-<div class="block1">
+<!-- <div class="block1"> -->
 <br>
 <h1><%=@sub.title%></h1>
 <br>
@@ -9,4 +9,7 @@
 <a href="<%=new_post_url%>">Make a new post!</a>
 <br>
 <a href="<%=edit_sub_url%>">Edit</a>
-</div>
+<% @sub.posts.each do |post| %>
+<%= post.content %>
+<% end %>
+<!-- </div> -->
